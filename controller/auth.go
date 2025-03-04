@@ -19,8 +19,8 @@ func Register(c *fiber.Ctx) error {
     var req model.AuthRequest
     if err := c.BodyParser(&req); err != nil {
         return c.Status(400).JSON(fiber.Map{
-	    "message": err.Error(),
-	})
+        "message": err.Error(),
+    })
     }
     user := model.User{
         Email: req.Email,
@@ -51,8 +51,8 @@ func Login(c *fiber.Ctx) error {
     var req model.AuthRequest
     if err := c.BodyParser(&req); err != nil {
         return c.Status(400).JSON(fiber.Map{
-	    "message": err.Error(),
-	})
+            "message": err.Error(),
+        })
     }
     // var user model.User
     // res := database.DB.Where("email = ?", req.Email).First(&user)
@@ -65,13 +65,13 @@ func Login(c *fiber.Ctx) error {
     if !utils.ComparePassword(pw, req.Password) {
         return c.Status(400).JSON(fiber.Map{
             "message": "incorrect password",
-	})
+        })
     }
    
     token, err := utils.GenerateToken(1, req.Email)
     if err != nil {
         return c.Status(500).JSON(fiber.Map{
-	    "message": err.Error(),
+            "message": err.Error(),
         })
     }
     c.Set("Authorization", token)

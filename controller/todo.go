@@ -1,11 +1,11 @@
 package controller
 
 import (
-	"app/model"
-	"app/utils"
-	"fmt"
-	"github.com/gofiber/fiber/v2"
-	"github.com/golang-jwt/jwt/v5"
+    "app/model"
+    "app/utils"
+    "fmt"
+    "github.com/gofiber/fiber/v2"
+    "github.com/golang-jwt/jwt/v5"
 )
 
 // GetTodos
@@ -16,12 +16,12 @@ import (
 // @Security BearerAuth
 // @Router /app/todo [get]
 func GetTodos(c *fiber.Ctx) error {
-	user := c.Locals("user").(*jwt.Token)
-	claims := user.Claims.(jwt.MapClaims)
-	email := claims["email"].(string)
-	fmt.Println(email)
-	todo := []int{ 1, 2, 3}
-	return c.JSON(todo)
+    user := c.Locals("user").(*jwt.Token)
+    claims := user.Claims.(jwt.MapClaims)
+    email := claims["email"].(string)
+    fmt.Println(email)
+    todo := []int{ 1, 2, 3}
+    return c.JSON(todo)
 }
 
 // CreateTodo
@@ -34,18 +34,18 @@ func GetTodos(c *fiber.Ctx) error {
 // @Security BearerAuth
 // @Router /app/todo [post]
 func CreateTodo(c *fiber.Ctx) error {
-	payload := model.Todo{}
-	if err := c.BodyParser(&payload); err != nil {
-		utils.Logger.Err(err).Msg(err.Error())
+    payload := model.Todo{}
+    if err := c.BodyParser(&payload); err != nil {
+        utils.Logger.Err(err).Msg(err.Error())
         return err
     }
 
-	errs := utils.ValidatePayload(payload, c)
-	if errs != nil {
-		return errs
-	}
+    errs := utils.ValidatePayload(payload, c)
+    if errs != nil {
+        return errs
+    }
 
-	return c.JSON(fiber.Map{"status": "ok", "data": payload})
+    return c.JSON(fiber.Map{"status": "ok", "data": payload})
 }
 
 // GetTodo
@@ -57,7 +57,7 @@ func CreateTodo(c *fiber.Ctx) error {
 // @Security BearerAuth
 // @Router /app/todo/{todoId} [get]
 func GetTodo(c *fiber.Ctx) error {
-	return c.JSON((fiber.Map{"data": 1}))
+    return c.JSON((fiber.Map{"data": 1}))
 }
 
 // UpdateTodo
@@ -70,7 +70,7 @@ func GetTodo(c *fiber.Ctx) error {
 // @Security BearerAuth
 // @Router /app/todo/{todoId} [put]
 func UpdateTodo(c *fiber.Ctx) error {
-	return c.JSON(fiber.Map{"status": "ok"})
+    return c.JSON(fiber.Map{"status": "ok"})
 }
 
 // DeleteTodo
@@ -83,6 +83,6 @@ func UpdateTodo(c *fiber.Ctx) error {
 // @Security BearerAuth
 // @Router /app/todo/{todoId} [delete]
 func DeleteTodo(c *fiber.Ctx) error {
-	return c.JSON(fiber.Map{"status": "ok"})
+    return c.JSON(fiber.Map{"status": "ok"})
 }
 
