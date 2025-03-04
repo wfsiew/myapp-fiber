@@ -1,0 +1,179 @@
+definitions:
+  model.AuthRequest:
+    properties:
+      email:
+        type: string
+      password:
+        type: string
+    type: object
+  model.CountryData:
+    properties:
+      countryCode:
+        type: string
+      countryName:
+        type: string
+      telCode:
+        type: string
+    type: object
+  model.Todo:
+    properties:
+      text:
+        maxLength: 20
+        minLength: 5
+        type: string
+      title:
+        maxLength: 20
+        minLength: 5
+        type: string
+    required:
+    - text
+    - title
+    type: object
+info:
+  contact: {}
+  description: This is a sample server Petstore server.
+  title: Swagger App API
+  version: "1.0"
+paths:
+  /app/auth/login:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: AuthRequest payload
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/model.AuthRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      tags:
+      - Auth
+  /app/auth/register:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: AuthRequest payload
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/model.AuthRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      tags:
+      - Auth
+  /app/common/country/list:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CountryData'
+            type: array
+      tags:
+      - Common
+  /app/todo:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              type: integer
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Todos
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Todo payload
+        in: body
+        name: payload
+        required: true
+        schema:
+          $ref: '#/definitions/model.Todo'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Todos
+  /app/todo/{todoId}:
+    delete:
+      consumes:
+      - application/json
+      parameters:
+      - description: todoId
+        in: path
+        name: todoId
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Todos
+    get:
+      parameters:
+      - description: todoId
+        in: path
+        name: todoId
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Todos
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: todoId
+        in: path
+        name: todoId
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Todos
+securityDefinitions:
+  BearerAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"
