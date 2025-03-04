@@ -63,9 +63,10 @@ func Login(c *fiber.Ctx) error {
     // }
     pw := "$2b$10$XVqL9gPfhtnm/0i1zlhvlOBfnx8DIYeOR5SaOhOjlC0ZWfdB8qBKm"
     if !utils.ComparePassword(pw, req.Password) {
-        return c.Status(401).JSON(fiber.Map{
+        return c.Status(fiber.StatusUnauthorized).JSON(fiber.Map{
             "message": "Invalid Credentials",
             "error": "Unauthorized",
+            "statusCode": fiber.StatusUnauthorized,
         })
     }
    
