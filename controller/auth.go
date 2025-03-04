@@ -61,7 +61,7 @@ func Login(c *fiber.Ctx) error {
     // 		"message": "user not found",
     //     })
     // }
-    pw := "$2a$10$iQJTyS9J/mBU4p6EeXhjpuWvSBm9mzV0MaR3nG/fdINbGGodhjRqK"
+    pw := "$2b$10$XVqL9gPfhtnm/0i1zlhvlOBfnx8DIYeOR5SaOhOjlC0ZWfdB8qBKm"
     if !utils.ComparePassword(pw, req.Password) {
         return c.Status(400).JSON(fiber.Map{
             "message": "incorrect password",
