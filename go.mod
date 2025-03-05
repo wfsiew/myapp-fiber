@@ -31,6 +31,7 @@ require (
 	github.com/spatialcurrent/go-template-loader v0.0.0-20170803032207-4765873f6e7e // indirect
 	github.com/swaggo/files v0.0.0-20220610200504-28940afbdbfe // indirect
 	github.com/ttacon/chalk v0.0.0-20160626202418-22c06c80ed31 // indirect
+	github.com/valyala/fasttemplate v1.2.2 // indirect
 	golang.org/x/net v0.35.0 // indirect
 	golang.org/x/text v0.22.0 // indirect
 	golang.org/x/tools v0.30.0 // indirect
