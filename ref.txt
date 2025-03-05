@@ -1,3 +1,5 @@
 https://firatkomurcu.medium.com/swaggo-with-fiber-in-golang-4dec7ea74629
 
 https://medium.com/code-beyond/go-fiber-jwt-auth-eab51a7e2129
+
+https://www.example-code.com/golang/xades_malaysia_eInvoice.asp
