@@ -16,22 +16,13 @@
             <cbc:ID>E12345678912</cbc:ID>
         </cac:AdditionalDocumentReference>
     </cac:BillingReference>
+    {% for o in zdditionalDocumentReferenceList %}
     <cac:AdditionalDocumentReference>
         <cbc:ID>E12345678912</cbc:ID>
-        <cbc:DocumentType>CustomsImportForm</cbc:DocumentType>
+        {% if o.DocumentType != "" %}<cbc:DocumentType>{{ o.DocumentType }}</cbc:DocumentType>{% endif %}
+        {% if o.DocumentDescription != "" %}<cbc:DocumentDescription>{{ o.DocumentDescription }}</cbc:DocumentDescription>{% endif %}
     </cac:AdditionalDocumentReference>
-    <cac:AdditionalDocumentReference>
-        <cbc:ID>ASEAN-Australia-New Zealand FTA (AANZFTA)</cbc:ID>
-        <cbc:DocumentType>FreeTradeAgreement</cbc:DocumentType>
-        <cbc:DocumentDescription>Sample Description</cbc:DocumentDescription>
-    </cac:AdditionalDocumentReference>
-    <cac:AdditionalDocumentReference>
-        <cbc:ID>E12345678912</cbc:ID>
-        <cbc:DocumentType>K2</cbc:DocumentType>
-    </cac:AdditionalDocumentReference>
-    <cac:AdditionalDocumentReference>
-        <cbc:ID>CIF</cbc:ID>
-    </cac:AdditionalDocumentReference>
+    {% endfor %}
     <cac:AccountingSupplierParty>
         <cbc:AdditionalAccountID schemeAgencyName="CertEX">CPT-CCN-W-211111-KL-000002</cbc:AdditionalAccountID>
         <cac:Party>
