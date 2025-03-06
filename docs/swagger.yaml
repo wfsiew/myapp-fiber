@@ -84,6 +84,24 @@ paths:
             type: array
       tags:
       - Common
+  /app/invoice/data:
+    get:
+      produces:
+      - text/xml
+      responses:
+        "200":
+          description: OK
+      tags:
+      - Invoice
+  /app/invoice/index:
+    get:
+      produces:
+      - text/xml
+      responses:
+        "200":
+          description: OK
+      tags:
+      - Invoice
   /app/todo:
     get:
       produces:
