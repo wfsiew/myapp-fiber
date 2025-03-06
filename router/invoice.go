@@ -6,7 +6,7 @@ import (
 )
 
 func SetupInvoiceRoutes(router fiber.Router) {
-	inv := router.Group("/invoice")
-	inv.Get("/index", controller.GetIndex)
-	inv.Get("/data", controller.GetInvData)
+    inv := router.Group("/invoice")
+    inv.Get("/index", controller.GetIndex)
+    inv.Get("/data", controller.GetInvData)
 }
