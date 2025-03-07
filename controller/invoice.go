@@ -18,7 +18,6 @@ func GetIndex(c *fiber.Ctx) error {
     ld = append(ld, model.AdditionalDocumentReference{
         ID: "E12345678912",
         DocumentType: "CustomsImportForm",
-        DocumentDescription: "",
     })
     ld = append(ld, model.AdditionalDocumentReference{
         ID: "ASEAN-Australia-New Zealand FTA (AANZFTA)",
@@ -28,12 +27,9 @@ func GetIndex(c *fiber.Ctx) error {
     ld = append(ld, model.AdditionalDocumentReference{
         ID: "E12345678912",
         DocumentType: "K2",
-        DocumentDescription: "",
     })
     ld = append(ld, model.AdditionalDocumentReference{
         ID: "CIF",
-        DocumentType: "",
-        DocumentDescription: "",
     })
     err := c.Render("invoice.xml", fiber.Map{
         "inv": "INV1234598",

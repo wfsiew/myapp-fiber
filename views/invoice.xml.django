@@ -18,7 +18,7 @@
     </cac:BillingReference>
     {% for o in zdditionalDocumentReferenceList %}
     <cac:AdditionalDocumentReference>
-        <cbc:ID>E12345678912</cbc:ID>
+        <cbc:ID>{{ o.ID }}</cbc:ID>
         {% if o.DocumentType != "" %}<cbc:DocumentType>{{ o.DocumentType }}</cbc:DocumentType>{% endif %}
         {% if o.DocumentDescription != "" %}<cbc:DocumentDescription>{{ o.DocumentDescription }}</cbc:DocumentDescription>{% endif %}
     </cac:AdditionalDocumentReference>
