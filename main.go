@@ -41,7 +41,7 @@ func main() {
     database.ConnectDB()
     defer database.GetDb().Close()
 
-    app.Get("/swagger/*", fiberSwagger.WrapHandler)
+    app.Get("/docs/*", fiberSwagger.WrapHandler)
 
     router.SetupRoutes(app)
 
