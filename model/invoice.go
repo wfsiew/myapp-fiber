@@ -1,9 +1,14 @@
 package model
 
+import (
+    "encoding/xml"
+)
+
 type InvoicePeriod struct {
-    StartDate string
-    EndDate string
-    Description string
+    XMLName xml.Name `xml:"cac:InvoicePeriod"`
+    StartDate string `xml:"cbc:StartDate"`
+    EndDate string `xml:"cbc:EndDate"`
+    Description string `xml:"cbc:Description"`
 }
 
 type BillingReference struct {

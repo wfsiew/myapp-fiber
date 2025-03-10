@@ -2,6 +2,7 @@ package controller
 
 import (
     "fmt"
+    "encoding/xml"
     "app/config"
     "app/model"
     "github.com/gofiber/fiber/v2"
@@ -53,6 +54,23 @@ func GetInvData(c *fiber.Ctx) error {
     agent := fiber.Get(fmt.Sprintf("http://localhost:%s/app/invoice/index", port))
     _, body, _ := agent.Bytes()
     err := c.SendString(string(body[:]))
+    c.Set(fiber.HeaderContentType, fiber.MIMETextXML)
+    return err
+}
+
+func GetInvTest(c *fiber.Ctx) error {
+    x := &model.InvoicePeriod{}
+    x.StartDate = "2018-11-26"
+    x.EndDate = "2018-11-30"
+    x.Description = "Monthly"
+    o, _ := xml.MarshalIndent(x, " ", "  ")
+    fmt.Println(string(o))
+    start := `<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+    xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+    xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    `
+    end := "</Invoice>"
+    err := c.SendString(start + string(o) + end)
     c.Set(fiber.HeaderContentType, fiber.MIMETextXML)
     return err
 }
