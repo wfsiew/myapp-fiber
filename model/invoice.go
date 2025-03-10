@@ -31,8 +31,8 @@ type AddressLine struct {
 
 type Country struct {
     IdentificationCode string
-    MlistID string
-    MlistAgencyID string
+    AttrlistID string
+    AttrlistAgencyID string
 }
 
 type PostalAddress struct {
@@ -50,7 +50,7 @@ type PartyIdentification struct {
 
 type Party struct {
     IndustryClassificationCode string
-    Mname string
+    Attrname string
     PartyIdentificationList []PartyIdentification
     PostalAddress PostalAddress
     PartyLegalEntity PartyLegalEntity
@@ -59,7 +59,7 @@ type Party struct {
 
 type AccountingSupplierParty struct {
     AdditionalAccountID string
-    MschemeAgencyName string
+    AttrschemeAgencyName string
     Party Party
 }
 
@@ -77,7 +77,7 @@ type FreightAllowanceCharge struct {
     ChargeIndicator bool
     AllowanceChargeReason string
     Amount string
-    McurrencyID string
+    AttrcurrencyID string
 }
 
 type Shipment struct {
@@ -106,7 +106,7 @@ type PaymentTerms struct {
 type PrepaidPayment struct {
     ID string
     PaidAmount string
-    McurrencyID string
+    AttrcurrencyID string
     PaidDate string
     PaidTime string
 }
@@ -116,13 +116,13 @@ type AllowanceCharge struct {
     AllowanceChargeReason string
     MultiplierFactorNumeric string
     Amount string
-    McurrencyID string
+    AttrcurrencyID string
 }
 
 type TaxScheme struct {
     ID string
-    MschemeID string
-    MschemeAgencyID string
+    AttrschemeID string
+    AttrschemeAgencyID string
 }
 
 type TaxCategory struct {
@@ -134,42 +134,42 @@ type TaxCategory struct {
 
 type TaxSubtotal struct {
     TaxableAmount string
-    McurrencyID string
+    AttrcurrencyID string
     TaxAmount string
-    McurrencyID1 string
+    AttrcurrencyID1 string
     Percent string
     BaseUnitMeasure string
-    MunitCode string
+    AttrunitCode string
     PerUnitAmount string
-    McurrencyID2 string
+    AttrcurrencyID2 string
     TaxCategory TaxCategory
 }
 
 type TaxTotal struct {
     TaxAmount string
-    McurrencyID string
+    AttrcurrencyID string
     TaxSubtotal TaxSubtotal
 }
 
 type LegalMonetaryTotal struct {
     LineExtensionAmount string
-    McurrencyID string
+    AttrcurrencyID string
     TaxExclusiveAmount string
-    McurrencyID1 string
+    AttrcurrencyID1 string
     TaxInclusiveAmount string
-    McurrencyID2 string
+    AttrcurrencyID2 string
     AllowanceTotalAmount string
-    McurrencyID3 string
+    AttrcurrencyID3 string
     ChargeTotalAmount string
-    McurrencyID4 string
+    AttrcurrencyID4 string
     PayableRoundingAmount string
-    McurrencyID5 string
+    AttrcurrencyID5 string
     PayableAmount string
 }
 
 type CommodityClassification struct {
     ItemClassificationCode string
-    MlistID string
+    AttrlistID string
 }
 
 type OriginCountry struct {
@@ -184,18 +184,18 @@ type Item struct {
 
 type Price struct {
     PriceAmount string
-    McurrencyID string
+    AttrcurrencyID string
 }
 
 type ItemPriceExtension struct {
     Amount string
-    McurrencyID string
+    AttrcurrencyID string
 }
 
 type InvoiceLine struct {
     ID string
     InvoicedQuantity string
-    MunitCode string
+    AttrunitCode string
     LineExtensionAmount string
-    McurrencyID string
+    AttrcurrencyID string
 }
