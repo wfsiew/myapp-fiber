@@ -36,7 +36,7 @@ func GetIndex(c *fiber.Ctx) error {
         "issue_date": "2024-05-28",
         "tin": "C5890633090",
         "brn": "200201024235",
-        "zdditionalDocumentReferenceList": ld,
+        "additionalDocumentReferenceList": ld,
     })
     c.Set(fiber.HeaderContentType, fiber.MIMETextXML)
     return err

@@ -199,3 +199,25 @@ type InvoiceLine struct {
     LineExtensionAmount string
     AttrcurrencyID string
 }
+
+type Invoice struct {
+    ID string
+    IssueDate string
+    IssueTime string
+    InvoiceTypeCode string
+    AttrlistVersionID string
+    DocumentCurrencyCode string
+    InvoicePeriod InvoicePeriod
+    BillingReference BillingReference
+    AdditionalDocumentReference []AdditionalDocumentReference
+    AccountingSupplierParty AccountingSupplierParty
+    AccountingCustomerParty AccountingCustomerParty
+    Delivery Delivery
+    PaymentMeans PaymentMeans
+    PaymentTerms PaymentTerms
+    PrepaidPayment PrepaidPayment
+    AllowanceCharge []AllowanceCharge
+    TaxTotal TaxTotal
+    LegalMonetaryTotal LegalMonetaryTotal
+    InvoiceLine InvoiceLine
+}
