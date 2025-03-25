@@ -1,11 +1,17 @@
 package controller
 
 import (
-    "database/sql"
-    "github.com/gofiber/fiber/v2"
-    "app/database"
-    "app/model"
-    "app/utils"
+	"app/database"
+	"app/model"
+	"app/utils"
+	"database/sql"
+	"encoding/xml"
+	"log"
+	"net/http"
+	"time"
+
+	"github.com/gofiber/fiber/v2"
+	"github.com/tiaguinho/gosoap"
 )
 
 // GetCountries
@@ -57,4 +63,41 @@ func GetCountries(c *fiber.Ctx) error {
     }
 
     return c.JSON(ls)
+}
+
+// GetPatientData
+//
+// @Tags Common
+// @Produce json
+// @Success 200 {object} model.Patient
+// @Router /app/common/patient [get]
+func GetPatientData(c *fiber.Ctx) error {
+    var r model.PatientDataResponse
+    url := "https://nh-europa.nova-vesalius.com/ihp_uat/web_services/PATIENT/GetPatientData.cfc?WSDL"
+	httpClient := &http.Client{
+		Timeout: 1500 * time.Millisecond,
+	}
+
+    soap, err := gosoap.SoapClient(url, httpClient)
+	if err != nil {
+		log.Fatalf("SoapClient error: %s", err)
+	}
+
+	params := gosoap.Params{
+		"prn": "20-000110",
+	}
+
+    res, err := soap.Call("getPatientData", params)
+	if err != nil {
+		log.Fatalf("Call error: %s", err)
+	}
+
+	res.Unmarshal(&r)
+	result := model.Return{}
+	err = xml.Unmarshal([]byte(r.Return), &result)
+	if err != nil {
+		log.Fatalf("xml.Unmarshal error: %s", err)
+	}
+
+    return c.JSON(result.Patient)
 }

@@ -48,6 +48,7 @@ require (
 	github.com/rs/zerolog v1.33.0
 	github.com/sijms/go-ora/v2 v2.8.24
 	github.com/swaggo/fiber-swagger v1.3.0
+	github.com/tiaguinho/gosoap v1.4.4
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasthttp v1.59.0 // indirect
 	golang.org/x/sys v0.30.0 // indirect

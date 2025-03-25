@@ -6,6 +6,20 @@ definitions:
       password:
         type: string
     type: object
+  model.ChargeCategory:
+    properties:
+      code:
+        type: string
+      description:
+        type: string
+    type: object
+  model.ContactNumber:
+    properties:
+      email:
+        type: string
+      home:
+        type: string
+    type: object
   model.CountryData:
     properties:
       countryCode:
@@ -13,6 +27,91 @@ definitions:
       countryName:
         type: string
       telCode:
+        type: string
+    type: object
+  model.Document:
+    properties:
+      code:
+        type: string
+      description:
+        type: string
+      expireDate:
+        type: string
+      value:
+        type: string
+    type: object
+  model.HomeAddress:
+    properties:
+      address1:
+        type: string
+      address2:
+        type: string
+      address3:
+        type: string
+      cityState:
+        type: string
+      country:
+        type: string
+      postalCode:
+        type: string
+    type: object
+  model.Name:
+    properties:
+      firstName:
+        type: string
+      lastName:
+        type: string
+      middleName:
+        type: string
+      title:
+        type: string
+    type: object
+  model.Nationality:
+    properties:
+      code:
+        type: string
+      description:
+        type: string
+    type: object
+  model.Patient:
+    properties:
+      chargeCategory:
+        $ref: '#/definitions/model.ChargeCategory'
+      contactNumber:
+        $ref: '#/definitions/model.ContactNumber'
+      dob:
+        type: string
+      document:
+        items:
+          $ref: '#/definitions/model.Document'
+        type: array
+      homeAddress:
+        $ref: '#/definitions/model.HomeAddress'
+      name:
+        $ref: '#/definitions/model.Name'
+      nationality:
+        $ref: '#/definitions/model.Nationality'
+      paymentClass:
+        $ref: '#/definitions/model.PaymentClass'
+      prn:
+        type: string
+      resident:
+        type: string
+      sex:
+        $ref: '#/definitions/model.Sex'
+    type: object
+  model.PaymentClass:
+    properties:
+      code:
+        type: string
+      description:
+        type: string
+    type: object
+  model.Sex:
+    properties:
+      code:
+        type: string
+      description:
         type: string
     type: object
   model.Todo:
@@ -82,6 +181,17 @@ paths:
             items:
               $ref: '#/definitions/model.CountryData'
             type: array
+      tags:
+      - Common
+  /app/common/patient:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Patient'
       tags:
       - Common
   /app/invoice/data:

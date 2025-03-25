@@ -86,6 +86,24 @@
                 }
             }
         },
+        "/app/common/patient": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Common"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/model.Patient"
+                        }
+                    }
+                }
+            }
+        },
         "/app/invoice/data": {
             "get": {
                 "produces": [
@@ -276,6 +294,28 @@
                 }
             }
         },
+        "model.ChargeCategory": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                }
+            }
+        },
+        "model.ContactNumber": {
+            "type": "object",
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "home": {
+                    "type": "string"
+                }
+            }
+        },
         "model.CountryData": {
             "type": "object",
             "properties": {
@@ -286,6 +326,137 @@
                     "type": "string"
                 },
                 "telCode": {
+                    "type": "string"
+                }
+            }
+        },
+        "model.Document": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "expireDate": {
+                    "type": "string"
+                },
+                "value": {
+                    "type": "string"
+                }
+            }
+        },
+        "model.HomeAddress": {
+            "type": "object",
+            "properties": {
+                "address1": {
+                    "type": "string"
+                },
+                "address2": {
+                    "type": "string"
+                },
+                "address3": {
+                    "type": "string"
+                },
+                "cityState": {
+                    "type": "string"
+                },
+                "country": {
+                    "type": "string"
+                },
+                "postalCode": {
+                    "type": "string"
+                }
+            }
+        },
+        "model.Name": {
+            "type": "object",
+            "properties": {
+                "firstName": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                },
+                "middleName": {
+                    "type": "string"
+                },
+                "title": {
+                    "type": "string"
+                }
+            }
+        },
+        "model.Nationality": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                }
+            }
+        },
+        "model.Patient": {
+            "type": "object",
+            "properties": {
+                "chargeCategory": {
+                    "$ref": "#/definitions/model.ChargeCategory"
+                },
+                "contactNumber": {
+                    "$ref": "#/definitions/model.ContactNumber"
+                },
+                "dob": {
+                    "type": "string"
+                },
+                "document": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/model.Document"
+                    }
+                },
+                "homeAddress": {
+                    "$ref": "#/definitions/model.HomeAddress"
+                },
+                "name": {
+                    "$ref": "#/definitions/model.Name"
+                },
+                "nationality": {
+                    "$ref": "#/definitions/model.Nationality"
+                },
+                "paymentClass": {
+                    "$ref": "#/definitions/model.PaymentClass"
+                },
+                "prn": {
+                    "type": "string"
+                },
+                "resident": {
+                    "type": "string"
+                },
+                "sex": {
+                    "$ref": "#/definitions/model.Sex"
+                }
+            }
+        },
+        "model.PaymentClass": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                }
+            }
+        },
+        "model.Sex": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "description": {
                     "type": "string"
                 }
             }
