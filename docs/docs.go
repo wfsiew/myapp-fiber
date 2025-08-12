@@ -418,7 +418,7 @@ const docTemplate = `{
                 "dob": {
                     "type": "string"
                 },
-                "document": {
+                "documents": {
                     "type": "array",
                     "items": {
                         "$ref": "#/definitions/model.Document"

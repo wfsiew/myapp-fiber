@@ -94,10 +94,20 @@ func GetPatientData(c *fiber.Ctx) error {
 
 	res.Unmarshal(&r)
 	result := model.Return{}
+    resulterr := model.ReturnErr{}
 	err = xml.Unmarshal([]byte(r.Return), &result)
 	if err != nil {
 		log.Fatalf("xml.Unmarshal error: %s", err)
 	}
+
+    if result.Patient.Prn == "" {
+        err = xml.Unmarshal([]byte(r.Return), &resulterr)
+        if err != nil {
+            log.Fatalf("xml.Unmarshal error: %s", err)
+        }
+
+        return c.JSON(resulterr.Error)
+    }
 
     return c.JSON(result.Patient)
 }

@@ -81,7 +81,7 @@ definitions:
         $ref: '#/definitions/model.ContactNumber'
       dob:
         type: string
-      document:
+      documents:
         items:
           $ref: '#/definitions/model.Document'
         type: array

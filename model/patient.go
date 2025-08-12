@@ -11,6 +11,11 @@ type Return struct {
 	Patient Patient  `xml:"Patient"`
 }
 
+type ReturnErr struct {
+	XMLName xml.Name `xml:"Result"`
+	Error   Error    `xml:"Error"`
+}
+
 type Name struct {
 	Title      string `xml:"Title"`
 	FirstName  string `xml:"FirstName"`
@@ -60,15 +65,20 @@ type PaymentClass struct {
 }
 
 type Patient struct {
-	Prn            string         `xml:"PRN"`
-	Name           Name           `xml:"Name"`
-	Resident       string         `xml:"Resident"`
-	DOB            string         `xml:"DOB"`
-	Sex            Sex            `xml:"Sex"`
-	HomeAddress    HomeAddress    `xml:"HomeAddress"`
-	ContactNumber  ContactNumber  `xml:"ContactNumber"`
-	Document       []Document     `xml:"Document"`
-	Nationality    Nationality    `xml:"Nationality"`
-	ChargeCategory ChargeCategory `xml:"ChargeCategory"`
-	PaymentClass   PaymentClass   `xml:"PaymentClass"`
+	Prn            string         `xml:"PRN" json:"prn"`
+	Name           Name           `xml:"Name" json:"name"`
+	Resident       string         `xml:"Resident" json:"resident"`
+	DOB            string         `xml:"DOB" json:"dob"`
+	Sex            Sex            `xml:"Sex" json:"sex"`
+	HomeAddress    HomeAddress    `xml:"HomeAddress" json:"homeAddress"`
+	ContactNumber  ContactNumber  `xml:"ContactNumber" json:"contactNumber"`
+	Document       []Document     `xml:"Document" json:"documents"`
+	Nationality    Nationality    `xml:"Nationality" json:"nationality"`
+	ChargeCategory ChargeCategory `xml:"ChargeCategory" json:"chargeCategory"`
+	PaymentClass   PaymentClass   `xml:"PaymentClass" json:"paymentClass"`
+}
+
+type Error struct {
+	ErrorCode    string `xml:"ErrorCode" json:"errorCode"`
+	ErrorMessage string `xml:"ErrorMessage" json:"errorMessage"`
 }
