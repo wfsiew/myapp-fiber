@@ -6,6 +6,7 @@ import (
 	"app/utils"
 	"database/sql"
 	"encoding/xml"
+	"fmt"
 	"log"
 	"net/http"
 	"time"
@@ -65,6 +66,56 @@ func GetCountries(c *fiber.Ctx) error {
     return c.JSON(ls)
 }
 
+// Authenticate
+//
+// @Tags Common
+// @Produce json
+// @Success 200 {object} model.Token
+// @Router /app/common/login [get]
+func Authenticate(c *fiber.Ctx) error {
+    url := "https://nh-europa.nova-vesalius.com/ihp_uat/web_services/AUTHENTICATION/Login.cfc?WSDL"
+    httpClient := &http.Client{
+		Timeout: 1500 * time.Millisecond,
+	}
+
+    soap, err := gosoap.SoapClient(url, httpClient)
+	if err != nil {
+		log.Fatalf("SoapClient error: %s", err)
+	}
+
+    params := gosoap.Params{
+		"company_code": "IHP",
+        "system_code": "MOBILE",
+        "password": "password",
+	}
+
+    res, err := soap.Call("login", params)
+	if err != nil {
+		log.Fatalf("Call error: %s", err)
+	}
+
+    var r model.LoginResponse
+    res.Unmarshal(&r)
+    result := model.LoginReturn{}
+    resulterr := model.ReturnErr{}
+    fmt.Println(r.Return)
+    err = xml.Unmarshal([]byte(r.Return), &result)
+    if err != nil {
+		log.Fatalf("xml.Unmarshal error: %s", err)
+	}
+
+    if result.Token.Token_number == "" {
+        err = xml.Unmarshal([]byte(r.Return), &resulterr)
+        if err != nil {
+            log.Fatalf("xml.Unmarshal error: %s", err)
+        }
+
+        return c.JSON(resulterr.Error)
+    }
+
+    return c.JSON(result.Token)
+}
+
 // GetPatientData
 //
 // @Tags Common
@@ -72,7 +123,6 @@ func GetCountries(c *fiber.Ctx) error {
 // @Success 200 {object} model.Patient
 // @Router /app/common/patient [get]
 func GetPatientData(c *fiber.Ctx) error {
-    var r model.PatientDataResponse
     url := "https://nh-europa.nova-vesalius.com/ihp_uat/web_services/PATIENT/GetPatientData.cfc?WSDL"
 	httpClient := &http.Client{
 		Timeout: 1500 * time.Millisecond,
@@ -92,6 +142,7 @@ func GetPatientData(c *fiber.Ctx) error {
 		log.Fatalf("Call error: %s", err)
 	}
 
+    var r model.PatientDataResponse
 	res.Unmarshal(&r)
 	result := model.Return{}
     resulterr := model.ReturnErr{}

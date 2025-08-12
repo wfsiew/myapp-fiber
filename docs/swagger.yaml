@@ -128,6 +128,11 @@ definitions:
     - text
     - title
     type: object
+  model.Token:
+    properties:
+      tokenNumber:
+        type: string
+    type: object
 info:
   contact: {}
   description: This is a sample server Petstore server.
@@ -181,6 +186,17 @@ paths:
             items:
               $ref: '#/definitions/model.CountryData'
             type: array
+      tags:
+      - Common
+  /app/common/login:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Token'
       tags:
       - Common
   /app/common/patient:

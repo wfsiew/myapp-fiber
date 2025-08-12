@@ -94,6 +94,24 @@ const docTemplate = `{
                 }
             }
         },
+        "/app/common/login": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Common"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/model.Token"
+                        }
+                    }
+                }
+            }
+        },
         "/app/common/patient": {
             "get": {
                 "produces": [
@@ -485,6 +503,14 @@ const docTemplate = `{
                     "type": "string",
                     "maxLength": 20,
                     "minLength": 5
+                }
+            }
+        },
+        "model.Token": {
+            "type": "object",
+            "properties": {
+                "tokenNumber": {
+                    "type": "string"
                 }
             }
         }
