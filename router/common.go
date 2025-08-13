@@ -9,5 +9,6 @@ func SetupCommonRoutes(router fiber.Router) {
     common := router.Group("/common")
     common.Get("/country/list", controller.GetCountries)
     common.Get("/login", controller.Authenticate)
+    common.Get("/logout/:token", controller.Logout)
     common.Get("/patient", controller.GetPatientData)
 }

@@ -1,0 +1,22 @@
+{"level":"fatal","error":"exit status 0x40010004","time":"2025-08-12T17:57:13+08:00","message":"Fiber app error"}
+{"level":"fatal","error":"exit status 0xc000013a","time":"2025-08-13T11:15:43+08:00","message":"Fiber app error"}
+{"level":"fatal","error":"exit status 0xc000013a","time":"2025-08-13T11:16:13+08:00","message":"Fiber app error"}
+{"level":"fatal","error":"exit status 1","time":"2025-08-13T11:19:43+08:00","message":"Fiber app error"}
+{"level":"fatal","error":"exit status 1","time":"2025-08-13T11:20:14+08:00","message":"Fiber app error"}
+{"level":"fatal","error":"exit status 1","time":"2025-08-13T11:20:46+08:00","message":"Fiber app error"}
+{"level":"error","ip":"127.0.0.1","latency":"223.7773ms","status":500,"method":"GET","url":"/app/common/logout/1308547301114","time":"2025-08-13T11:28:14+08:00","message":"Server error"}
+{"level":"error","ip":"127.0.0.1","latency":"108.2929ms","status":500,"method":"GET","url":"/app/common/logout/1308547301114","time":"2025-08-13T11:29:11+08:00","message":"Server error"}
+{"level":"error","ip":"127.0.0.1","latency":"221.4758ms","status":500,"method":"GET","url":"/app/common/logout/1308547301114","time":"2025-08-13T11:35:48+08:00","message":"Server error"}
+{"level":"error","ip":"127.0.0.1","latency":"186.894ms","status":500,"method":"GET","url":"/app/common/logout/1308547301114","time":"2025-08-13T11:36:41+08:00","message":"Server error"}
+{"level":"error","ip":"127.0.0.1","latency":"139.7958ms","status":500,"method":"GET","url":"/app/common/login","time":"2025-08-13T11:52:21+08:00","message":"Server error"}
+{"level":"error","ip":"127.0.0.1","latency":"147.6923ms","status":500,"method":"GET","url":"/app/common/login","time":"2025-08-13T11:52:33+08:00","message":"Server error"}
+{"level":"error","ip":"127.0.0.1","latency":"197.2163ms","status":500,"method":"GET","url":"/app/common/login","time":"2025-08-13T11:53:31+08:00","message":"Server error"}
+{"level":"error","ip":"127.0.0.1","latency":"187.8704ms","status":500,"method":"GET","url":"/app/common/login","time":"2025-08-13T11:53:38+08:00","message":"Server error"}
+{"level":"fatal","error":"exit status 0xc000013a","time":"2025-08-13T12:09:44+08:00","message":"Fiber app error"}
+{"level":"error","ip":"127.0.0.1","latency":"188.8157ms","status":500,"method":"GET","url":"/app/common/login","time":"2025-08-13T12:31:29+08:00","message":"Server error"}
+{"level":"fatal","error":"exit status 0xc000013a","time":"2025-08-13T12:32:04+08:00","message":"Fiber app error"}
+{"level":"error","ip":"127.0.0.1","latency":"186.2213ms","status":500,"method":"GET","url":"/app/common/login","time":"2025-08-13T12:34:16+08:00","message":"Server error"}
+{"level":"fatal","error":"exit status 0xc000013a","time":"2025-08-13T12:36:06+08:00","message":"Fiber app error"}
+{"level":"error","ip":"127.0.0.1","latency":"163.1716ms","status":500,"method":"GET","url":"/app/common/login","time":"2025-08-13T12:36:21+08:00","message":"Server error"}
+{"level":"error","ip":"127.0.0.1","latency":"195.7412ms","status":500,"method":"GET","url":"/app/common/login","time":"2025-08-13T12:36:41+08:00","message":"Server error"}
+{"level":"error","ip":"127.0.0.1","latency":"193.3851ms","status":500,"method":"GET","url":"/app/common/login","time":"2025-08-13T12:48:21+08:00","message":"Server error"}
