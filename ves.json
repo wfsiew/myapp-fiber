@@ -1,0 +1,366 @@
+{
+  "name": "ves",
+  "description": "",
+  "version": "9.5.0",
+  "timestamp": 1755062667363,
+  "folders": [],
+  "environments": [],
+  "requests": [
+    {
+      "id": "20f333d8-fd84-40af-823a-a8226ae5ec4b",
+      "parentId": null,
+      "spec": "wsdl",
+      "name": "getFutureAppointment",
+      "url": "https://nh-europa.nova-vesalius.com:443/ihp_uat/web_services/APPOINTMENT/getFutureAppointment.cfc",
+      "method": "POST",
+      "body": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:axi=\"http://ws.apache.org/axis2\">\n    <x:Header/>\n    <x:Body>\n        <axi:getFutureAppointment>\n            <axi:prn>20-000110</axi:prn>\n            <axi:company_code>ihp</axi:company_code>\n            <axi:token_number>1308547641323</axi:token_number>\n        </axi:getFutureAppointment>\n    </x:Body>\n</x:Envelope>",
+      "bodyType": "raw",
+      "rawType": "xml",
+      "authType": null,
+      "preRequest": "",
+      "postResponse": "",
+      "reqPanelSize": 50,
+      "resPanelSize": 50,
+      "rename": false,
+      "inProgress": false,
+      "activeScriptTab": "0",
+      "activeRequestTab": "0",
+      "activeResponseTab": "0",
+      "activeResponseBodyTab": "0",
+      "activeResultTab": "0",
+      "activeResponseMultipart": null,
+      "authBasic": null,
+      "multipartItems": [],
+      "createdAt": 1755062566558,
+      "modifiedAt": 1755062613119,
+      "headers": [
+        {
+          "id": "46bf9dac-933e-4799-8ceb-a1e37b10f673",
+          "name": "Content-Type",
+          "value": "text/xml; charset=utf-8",
+          "enabled": true
+        },
+        {
+          "id": "03c2cb36-d05d-44a5-9b3f-e4f5cc71372a",
+          "name": "SOAPAction",
+          "value": "urn:getFutureAppointment",
+          "enabled": true
+        }
+      ],
+      "formItems": [],
+      "queryParams": []
+    },
+    {
+      "id": "5d3a301f-3593-4e4c-84f7-3965e8025e24",
+      "parentId": null,
+      "spec": "wsdl",
+      "name": "getPatientData",
+      "url": "http://nh-europa.nova-vesalius.com:80/ihp_uat/web_services/PATIENT/GetPatientData.cfc",
+      "method": "POST",
+      "body": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:axi=\"http://ws.apache.org/axis2\">\n    <x:Header/>\n    <x:Body>\n        <axi:getPatientData>\n            <axi:prn>?</axi:prn>\n        </axi:getPatientData>\n    </x:Body>\n</x:Envelope>",
+      "bodyType": "raw",
+      "rawType": "xml",
+      "authType": null,
+      "preRequest": "",
+      "postResponse": "",
+      "reqPanelSize": 50,
+      "resPanelSize": 50,
+      "rename": false,
+      "inProgress": false,
+      "activeScriptTab": "0",
+      "activeRequestTab": "1",
+      "activeResponseTab": "0",
+      "activeResponseBodyTab": "0",
+      "activeResultTab": "0",
+      "activeResponseMultipart": null,
+      "authBasic": null,
+      "multipartItems": [],
+      "createdAt": 1754984374235,
+      "modifiedAt": 1754984436975,
+      "headers": [
+        {
+          "id": "e45d05d5-2538-4748-8e10-3322a3e5ddb1",
+          "name": "Content-Type",
+          "value": "text/xml; charset=utf-8",
+          "enabled": true
+        },
+        {
+          "id": "19dac95c-801e-46b3-bf0c-1777f7091ba5",
+          "name": "SOAPAction",
+          "value": "urn:getPatientData",
+          "enabled": true
+        }
+      ],
+      "formItems": [],
+      "queryParams": []
+    },
+    {
+      "id": "6e3928fb-f38c-4846-82fa-7ab9017fced0",
+      "parentId": null,
+      "spec": "wsdl",
+      "name": "login",
+      "url": "https://nh-europa.nova-vesalius.com:443/ihp_uat/web_services/AUTHENTICATION/Login.cfc",
+      "method": "POST",
+      "body": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:axi=\"http://ws.apache.org/axis2\">\n    <x:Header/>\n    <x:Body>\n        <axi:login>\n            <axi:company_code>ihp</axi:company_code>\n            <axi:system_code>mobile</axi:system_code>\n            <axi:password>password</axi:password>\n        </axi:login>\n    </x:Body>\n</x:Envelope>",
+      "bodyType": "raw",
+      "rawType": "xml",
+      "authType": null,
+      "preRequest": "",
+      "postResponse": "",
+      "reqPanelSize": 50,
+      "resPanelSize": 50,
+      "rename": false,
+      "inProgress": false,
+      "activeScriptTab": "0",
+      "activeRequestTab": "0",
+      "activeResponseTab": "0",
+      "activeResponseBodyTab": "0",
+      "activeResultTab": "0",
+      "activeResponseMultipart": null,
+      "authBasic": null,
+      "multipartItems": [],
+      "createdAt": 1755053677694,
+      "modifiedAt": 1755062589970,
+      "headers": [
+        {
+          "id": "ca04b806-797e-41d0-b6e2-fd71754025f1",
+          "name": "Content-Type",
+          "value": "text/xml; charset=utf-8",
+          "enabled": true
+        },
+        {
+          "id": "617fea87-6916-4c84-bf85-86c822eaf0b8",
+          "name": "SOAPAction",
+          "value": "urn:login",
+          "enabled": true
+        }
+      ],
+      "formItems": [],
+      "queryParams": []
+    },
+    {
+      "id": "781a3e9b-d8d0-41a9-af27-5cb318af0a19",
+      "parentId": null,
+      "spec": "wsdl",
+      "name": "login",
+      "url": "https://nh-europa.nova-vesalius.com:443/ihp_uat/web_services/AUTHENTICATION/Login.cfc",
+      "method": "POST",
+      "body": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:axi=\"http://ws.apache.org/axis2\">\n    <x:Header/>\n    <x:Body>\n        <axi:login>\n            <axi:company_code>?</axi:company_code>\n            <axi:system_code>?</axi:system_code>\n            <axi:password>?</axi:password>\n        </axi:login>\n    </x:Body>\n</x:Envelope>",
+      "bodyType": "raw",
+      "rawType": "xml",
+      "authType": null,
+      "preRequest": "",
+      "postResponse": "",
+      "reqPanelSize": 50,
+      "resPanelSize": 50,
+      "rename": false,
+      "inProgress": false,
+      "activeScriptTab": "0",
+      "activeRequestTab": "0",
+      "activeResponseTab": "0",
+      "activeResponseBodyTab": "0",
+      "activeResultTab": "0",
+      "activeResponseMultipart": null,
+      "authBasic": null,
+      "multipartItems": [],
+      "createdAt": 1755057509825,
+      "modifiedAt": 1755057513424,
+      "headers": [
+        {
+          "id": "1850eaf6-4aeb-4212-be38-6e425ae3dd22",
+          "name": "Content-Type",
+          "value": "text/xml; charset=utf-8",
+          "enabled": true
+        },
+        {
+          "id": "bf405d12-9742-4615-a8ba-1b03bb6cf89f",
+          "name": "SOAPAction",
+          "value": "urn:login",
+          "enabled": true
+        }
+      ],
+      "formItems": [],
+      "queryParams": []
+    },
+    {
+      "id": "7c08e4cf-0442-4d10-91ec-87db7d58b4a0",
+      "parentId": null,
+      "spec": "wsdl",
+      "name": "Logout",
+      "url": "http://nh-europa.nova-vesalius.com:80/ihp_uat/web_services/AUTHENTICATION/Logout.cfc",
+      "method": "POST",
+      "body": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:axi=\"http://ws.apache.org/axis2\">\n    <x:Header/>\n    <x:Body>\n        <axi:Logout>\n            <axi:token_number>1308547301114</axi:token_number>\n        </axi:Logout>\n    </x:Body>\n</x:Envelope>",
+      "bodyType": "raw",
+      "rawType": "xml",
+      "authType": null,
+      "preRequest": "",
+      "postResponse": "",
+      "reqPanelSize": 50,
+      "resPanelSize": 50,
+      "rename": false,
+      "inProgress": false,
+      "activeScriptTab": "0",
+      "activeRequestTab": "0",
+      "activeResponseTab": "0",
+      "activeResponseBodyTab": "0",
+      "activeResultTab": "0",
+      "activeResponseMultipart": null,
+      "authBasic": null,
+      "multipartItems": [],
+      "createdAt": 1755053825963,
+      "modifiedAt": 1755055459524,
+      "headers": [
+        {
+          "id": "4fd9de3f-474d-4d28-94de-a18729467f83",
+          "name": "Content-Type",
+          "value": "text/xml; charset=utf-8",
+          "enabled": true
+        },
+        {
+          "id": "ba67c5d3-9348-42bb-b47f-d7605764772e",
+          "name": "SOAPAction",
+          "value": "urn:Logout",
+          "enabled": true
+        }
+      ],
+      "formItems": [],
+      "queryParams": []
+    },
+    {
+      "id": "cde48560-89fe-4640-81b7-e89b2784176a",
+      "parentId": null,
+      "spec": "wsdl",
+      "name": "getPatientData",
+      "url": "http://nh-europa.nova-vesalius.com:80/ihp_uat/web_services/PATIENT/GetPatientData.cfc",
+      "method": "POST",
+      "body": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:axi=\"http://ws.apache.org/axis2\">\n    <x:Header/>\n    <x:Body>\n        <axi:getPatientData>\n            <axi:prn>20-000110v</axi:prn>\n        </axi:getPatientData>\n    </x:Body>\n</x:Envelope>",
+      "bodyType": "raw",
+      "rawType": "xml",
+      "authType": null,
+      "preRequest": "",
+      "postResponse": "",
+      "reqPanelSize": 50,
+      "resPanelSize": 50,
+      "rename": false,
+      "inProgress": false,
+      "activeScriptTab": "0",
+      "activeRequestTab": "0",
+      "activeResponseTab": "0",
+      "activeResponseBodyTab": "0",
+      "activeResultTab": "0",
+      "activeResponseMultipart": null,
+      "authBasic": null,
+      "multipartItems": [],
+      "createdAt": 1754984470765,
+      "modifiedAt": 1754985006432,
+      "headers": [
+        {
+          "id": "60233941-014c-4d8e-916b-da2291721cf6",
+          "name": "Content-Type",
+          "value": "text/xml; charset=utf-8",
+          "enabled": true
+        },
+        {
+          "id": "4c423401-4c72-465f-b0f2-678d5ddc6fd7",
+          "name": "SOAPAction",
+          "value": "urn:getPatientData",
+          "enabled": true
+        }
+      ],
+      "formItems": [],
+      "queryParams": []
+    },
+    {
+      "id": "f0661f2f-9ac8-4d13-b256-aa70caac1235",
+      "parentId": null,
+      "spec": "wsdl",
+      "name": "getPatientData",
+      "url": "http://nh-europa.nova-vesalius.com:80/ihp_uat/web_services/PATIENT/GetPatientData.cfc",
+      "method": "POST",
+      "body": "<x:Envelope\n    xmlns:x=\"http://schemas.xmlsoap.org/soap/envelope/\"\n    xmlns:axi=\"http://ws.apache.org/axis2\">\n    <x:Header/>\n    <x:Body>\n        <axi:getPatientData>\n            <axi:prn>20-000110</axi:prn>\n        </axi:getPatientData>\n    </x:Body>\n</x:Envelope>",
+      "bodyType": "raw",
+      "rawType": "xml",
+      "authType": null,
+      "preRequest": "",
+      "postResponse": "",
+      "reqPanelSize": 50,
+      "resPanelSize": 50,
+      "rename": false,
+      "inProgress": false,
+      "activeScriptTab": "0",
+      "activeRequestTab": "0",
+      "activeResponseTab": "0",
+      "activeResponseBodyTab": "0",
+      "activeResultTab": "0",
+      "activeResponseMultipart": null,
+      "authBasic": null,
+      "multipartItems": [],
+      "createdAt": 1755054119388,
+      "modifiedAt": 1755054134857,
+      "headers": [
+        {
+          "id": "3ab57cb8-c190-4178-9912-7a244a4a8485",
+          "name": "Content-Type",
+          "value": "text/xml; charset=utf-8",
+          "enabled": true
+        },
+        {
+          "id": "3d240df8-9862-448b-964e-1f19486ec73c",
+          "name": "SOAPAction",
+          "value": "urn:getPatientData",
+          "enabled": true
+        }
+      ],
+      "formItems": [],
+      "queryParams": []
+    }
+  ],
+  "services": [
+    {
+      "id": "529ea72c-4ca5-4377-91aa-02f06f2db5be",
+      "name": "ihp_uat.web_services.AUTHENTICATION.Logout.cfc",
+      "url": "https://nh-europa.nova-vesalius.com/ihp_uat/web_services/AUTHENTICATION/Logout.cfc?WSDL",
+      "spec": "wsdl",
+      "collapsed": false
+    },
+    {
+      "id": "794af46b-a0c1-4df4-9d67-ecb00f5dbc6a",
+      "name": "ihp_uat.web_services.PATIENT.GetPatientData.cfc",
+      "url": "https://nh-europa.nova-vesalius.com/ihp_uat/web_services/PATIENT/GetPatientData.cfc?wsdl",
+      "spec": "wsdl",
+      "collapsed": false
+    },
+    {
+      "id": "998120b5-dcba-453f-93c6-c0e3e40feb43",
+      "name": "ihp_uat.web_services.AUTHENTICATION.Login.cfc",
+      "url": "https://nh-europa.nova-vesalius.com/ihp_uat/web_services/AUTHENTICATION/Login.cfc?WSDL",
+      "spec": "wsdl",
+      "collapsed": false
+    },
+    {
+      "id": "d7c6d881-9286-477a-ac2f-055e0451e1ec",
+      "name": "ihp_uat.web_services.APPOINTMENT.getFutureAppointment.cfc",
+      "url": "https://nh-europa.nova-vesalius.com/ihp_uat/web_services/APPOINTMENT/getFutureAppointment.cfc?wsdl",
+      "spec": "wsdl",
+      "collapsed": false
+    }
+  ],
+  "serviceSpecs": [
+    {
+      "id": "529ea72c-4ca5-4377-91aa-02f06f2db5be",
+      "content": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><wsdl:definitions xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\" xmlns:ax27=\"http://rpc.xml.coldfusion/xsd\" xmlns:ns=\"http://ws.apache.org/axis2\" xmlns:wsaw=\"http://www.w3.org/2006/05/addressing/wsdl\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\" xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\" xmlns:ns1=\"http://org.apache.axis2/xsd\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\" targetNamespace=\"http://ws.apache.org/axis2\">\n    <wsdl:types>\n        <xs:schema xmlns:ax28=\"http://rpc.xml.coldfusion/xsd\" attributeFormDefault=\"qualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://ws.apache.org/axis2\">\n            <xs:import namespace=\"http://rpc.xml.coldfusion/xsd\"/>\n            <xs:element name=\"ihp_uat.web_services.AUTHENTICATION.Logout.cfcCFCInvocationException\">\n                <xs:complexType>\n                    <xs:sequence>\n                        <xs:element minOccurs=\"0\" name=\"CFCInvocationException\" nillable=\"true\" type=\"ax28:CFCInvocationException\"/>\n                    </xs:sequence>\n                </xs:complexType>\n            </xs:element>\n            <xs:element name=\"Logout\">\n                <xs:complexType>\n                    <xs:sequence>\n                        <xs:element minOccurs=\"0\" name=\"token_number\" nillable=\"true\" type=\"xs:string\"/>\n                    </xs:sequence>\n                </xs:complexType>\n            </xs:element>\n            <xs:element name=\"LogoutResponse\">\n                <xs:complexType>\n                    <xs:sequence>\n                        <xs:element minOccurs=\"0\" name=\"return\" nillable=\"true\" type=\"xs:string\"/>\n                    </xs:sequence>\n                </xs:complexType>\n            </xs:element>\n            <xs:complexType name=\"document\">\n                <xs:sequence>\n                    <xs:any/>\n                </xs:sequence>\n            </xs:complexType>\n        </xs:schema>\n        <xs:schema attributeFormDefault=\"qualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://rpc.xml.coldfusion/xsd\">\n            <xs:complexType name=\"CFCInvocationException\">\n                <xs:sequence/>\n            </xs:complexType>\n            <xs:complexType name=\"StructDelegate\">\n                <xs:sequence>\n                    <xs:element maxOccurs=\"unbounded\" minOccurs=\"0\" name=\"entries\" nillable=\"true\" type=\"ax27:EntryDelegate\"/>\n                </xs:sequence>\n            </xs:complexType>\n            <xs:complexType name=\"EntryDelegate\">\n                <xs:sequence>\n                    <xs:element minOccurs=\"0\" name=\"key\" nillable=\"true\" type=\"xs:anyType\"/>\n                    <xs:element minOccurs=\"0\" name=\"value\" nillable=\"true\" type=\"xs:anyType\"/>\n                </xs:sequence>\n            </xs:complexType>\n            <xs:complexType name=\"QueryBean\">\n                <xs:sequence>\n                    <xs:element maxOccurs=\"unbounded\" minOccurs=\"0\" name=\"columnList\" nillable=\"true\" type=\"xs:string\"/>\n                    <xs:element maxOccurs=\"unbounded\" minOccurs=\"0\" name=\"data\" nillable=\"true\" type=\"ax27:ArrayOfObject\"/>\n                </xs:sequence>\n            </xs:complexType>\n            <xs:complexType name=\"ArrayOfObject\">\n                <xs:sequence>\n                    <xs:element maxOccurs=\"unbounded\" minOccurs=\"0\" name=\"array\" nillable=\"true\" type=\"xs:anyType\"/>\n                </xs:sequence>\n            </xs:complexType>\n            <xs:complexType name=\"DocumentDelegate\">\n                <xs:sequence>\n                    <xs:element minOccurs=\"0\" name=\"document\" nillable=\"true\" type=\"ns:document\"/>\n                </xs:sequence>\n            </xs:complexType>\n            <xs:complexType name=\"ArrayDelegate\">\n                <xs:sequence>\n                    <xs:element maxOccurs=\"unbounded\" minOccurs=\"0\" name=\"array\" nillable=\"true\" type=\"xs:anyType\"/>\n                </xs:sequence>\n            </xs:complexType>\n        </xs:schema>\n    </wsdl:types>\n    <wsdl:message name=\"LogoutRequest\">\n        <wsdl:part name=\"parameters\" element=\"ns:Logout\"/>\n    </wsdl:message>\n    <wsdl:message name=\"LogoutResponse\">\n        <wsdl:part name=\"parameters\" element=\"ns:LogoutResponse\"/>\n    </wsdl:message>\n    <wsdl:message name=\"ihp_uat.web_services.AUTHENTICATION.Logout.cfcCFCInvocationException\">\n        <wsdl:part name=\"parameters\" element=\"ns:ihp_uat.web_services.AUTHENTICATION.Logout.cfcCFCInvocationException\"/>\n    </wsdl:message>\n    <wsdl:portType name=\"ihp_uat.web_services.AUTHENTICATION.Logout.cfcPortType\">\n        <wsdl:operation name=\"Logout\">\n            <wsdl:input message=\"ns:LogoutRequest\" wsaw:Action=\"urn:Logout\"/>\n            <wsdl:output message=\"ns:LogoutResponse\" wsaw:Action=\"urn:LogoutResponse\"/>\n            <wsdl:fault message=\"ns:ihp_uat.web_services.AUTHENTICATION.Logout.cfcCFCInvocationException\" name=\"ihp_uat.web_services.AUTHENTICATION.Logout.cfcCFCInvocationException\" wsaw:Action=\"urn:Logoutihp_uat.web_services.AUTHENTICATION.Logout.cfcCFCInvocationException\"/>\n        </wsdl:operation>\n    </wsdl:portType>\n    <wsdl:binding name=\"ihp_uat.web_services.AUTHENTICATION.Logout.cfcSoap11Binding\" type=\"ns:ihp_uat.web_services.AUTHENTICATION.Logout.cfcPortType\">\n        <soap:binding transport=\"http://schemas.xmlsoap.org/soap/http\" style=\"document\"/>\n        <wsdl:operation name=\"Logout\">\n            <soap:operation soapAction=\"urn:Logout\" style=\"document\"/>\n            <wsdl:input>\n                <soap:body use=\"literal\"/>\n            </wsdl:input>\n            <wsdl:output>\n                <soap:body use=\"literal\"/>\n            </wsdl:output>\n            <wsdl:fault name=\"ihp_uat.web_services.AUTHENTICATION.Logout.cfcCFCInvocationException\">\n                <soap:fault use=\"literal\" name=\"ihp_uat.web_services.AUTHENTICATION.Logout.cfcCFCInvocationException\"/>\n            </wsdl:fault>\n        </wsdl:operation>\n    </wsdl:binding>\n    <wsdl:binding name=\"ihp_uat.web_services.AUTHENTICATION.Logout.cfcSoap12Binding\" type=\"ns:ihp_uat.web_services.AUTHENTICATION.Logout.cfcPortType\">\n        <soap12:binding transport=\"http://schemas.xmlsoap.org/soap/http\" style=\"document\"/>\n        <wsdl:operation name=\"Logout\">\n            <soap12:operation soapAction=\"urn:Logout\" style=\"document\"/>\n            <wsdl:input>\n                <soap12:body use=\"literal\"/>\n            </wsdl:input>\n            <wsdl:output>\n                <soap12:body use=\"literal\"/>\n            </wsdl:output>\n            <wsdl:fault name=\"ihp_uat.web_services.AUTHENTICATION.Logout.cfcCFCInvocationException\">\n                <soap12:fault use=\"literal\" name=\"ihp_uat.web_services.AUTHENTICATION.Logout.cfcCFCInvocationException\"/>\n            </wsdl:fault>\n        </wsdl:operation>\n    </wsdl:binding>\n    <wsdl:service name=\"ihp_uat.web_services.AUTHENTICATION.Logout.cfc\">\n        <wsdl:port name=\"ihp_uat.web_services.AUTHENTICATION.Logout.cfcHttpSoap11Endpoint\" binding=\"ns:ihp_uat.web_services.AUTHENTICATION.Logout.cfcSoap11Binding\">\n            <soap:address location=\"http://nh-europa.nova-vesalius.com:80/ihp_uat/web_services/AUTHENTICATION/Logout.cfc\"/>\n        </wsdl:port>\n        <wsdl:port name=\"ihp_uat.web_services.AUTHENTICATION.Logout.cfcHttpsSoap11Endpoint\" binding=\"ns:ihp_uat.web_services.AUTHENTICATION.Logout.cfcSoap11Binding\">\n            <soap:address location=\"https://nh-europa.nova-vesalius.com:443/ihp_uat/web_services/AUTHENTICATION/Logout.cfc\"/>\n        </wsdl:port>\n        <wsdl:port name=\"ihp_uat.web_services.AUTHENTICATION.Logout.cfcHttpsSoap12Endpoint\" binding=\"ns:ihp_uat.web_services.AUTHENTICATION.Logout.cfcSoap12Binding\">\n            <soap12:address location=\"https://nh-europa.nova-vesalius.com:443/ihp_uat/web_services/AUTHENTICATION/Logout.cfc\"/>\n        </wsdl:port>\n        <wsdl:port name=\"ihp_uat.web_services.AUTHENTICATION.Logout.cfcHttpSoap12Endpoint\" binding=\"ns:ihp_uat.web_services.AUTHENTICATION.Logout.cfcSoap12Binding\">\n            <soap12:address location=\"http://nh-europa.nova-vesalius.com:80/ihp_uat/web_services/AUTHENTICATION/Logout.cfc\"/>\n        </wsdl:port>\n    </wsdl:service>\n</wsdl:definitions>"
+    },
+    {
+      "id": "794af46b-a0c1-4df4-9d67-ecb00f5dbc6a",
+      "content": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><wsdl:definitions xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\" xmlns:ns=\"http://ws.apache.org/axis2\" xmlns:ax211=\"http://rpc.xml.coldfusion/xsd\" xmlns:wsaw=\"http://www.w3.org/2006/05/addressing/wsdl\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\" xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\" xmlns:ns1=\"http://org.apache.axis2/xsd\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\" targetNamespace=\"http://ws.apache.org/axis2\">\n    <wsdl:types>\n        <xs:schema xmlns:ax212=\"http://rpc.xml.coldfusion/xsd\" attributeFormDefault=\"qualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://ws.apache.org/axis2\">\n            <xs:import namespace=\"http://rpc.xml.coldfusion/xsd\"/>\n            <xs:element name=\"ihp_uat.web_services.PATIENT.GetPatientData.cfcCFCInvocationException\">\n                <xs:complexType>\n                    <xs:sequence>\n                        <xs:element minOccurs=\"0\" name=\"CFCInvocationException\" nillable=\"true\" type=\"ax212:CFCInvocationException\"/>\n                    </xs:sequence>\n                </xs:complexType>\n            </xs:element>\n            <xs:element name=\"getPatientData\">\n                <xs:complexType>\n                    <xs:sequence>\n                        <xs:element minOccurs=\"0\" name=\"prn\" nillable=\"true\" type=\"xs:string\"/>\n                    </xs:sequence>\n                </xs:complexType>\n            </xs:element>\n            <xs:element name=\"getPatientDataResponse\">\n                <xs:complexType>\n                    <xs:sequence>\n                        <xs:element minOccurs=\"0\" name=\"return\" nillable=\"true\" type=\"xs:string\"/>\n                    </xs:sequence>\n                </xs:complexType>\n            </xs:element>\n            <xs:complexType name=\"document\">\n                <xs:sequence>\n                    <xs:any/>\n                </xs:sequence>\n            </xs:complexType>\n        </xs:schema>\n        <xs:schema attributeFormDefault=\"qualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://rpc.xml.coldfusion/xsd\">\n            <xs:complexType name=\"CFCInvocationException\">\n                <xs:sequence/>\n            </xs:complexType>\n            <xs:complexType name=\"StructDelegate\">\n                <xs:sequence>\n                    <xs:element maxOccurs=\"unbounded\" minOccurs=\"0\" name=\"entries\" nillable=\"true\" type=\"ax211:EntryDelegate\"/>\n                </xs:sequence>\n            </xs:complexType>\n            <xs:complexType name=\"EntryDelegate\">\n                <xs:sequence>\n                    <xs:element minOccurs=\"0\" name=\"key\" nillable=\"true\" type=\"xs:anyType\"/>\n                    <xs:element minOccurs=\"0\" name=\"value\" nillable=\"true\" type=\"xs:anyType\"/>\n                </xs:sequence>\n            </xs:complexType>\n            <xs:complexType name=\"QueryBean\">\n                <xs:sequence>\n                    <xs:element maxOccurs=\"unbounded\" minOccurs=\"0\" name=\"columnList\" nillable=\"true\" type=\"xs:string\"/>\n                    <xs:element maxOccurs=\"unbounded\" minOccurs=\"0\" name=\"data\" nillable=\"true\" type=\"ax211:ArrayOfObject\"/>\n                </xs:sequence>\n            </xs:complexType>\n            <xs:complexType name=\"ArrayOfObject\">\n                <xs:sequence>\n                    <xs:element maxOccurs=\"unbounded\" minOccurs=\"0\" name=\"array\" nillable=\"true\" type=\"xs:anyType\"/>\n                </xs:sequence>\n            </xs:complexType>\n            <xs:complexType name=\"DocumentDelegate\">\n                <xs:sequence>\n                    <xs:element minOccurs=\"0\" name=\"document\" nillable=\"true\" type=\"ns:document\"/>\n                </xs:sequence>\n            </xs:complexType>\n            <xs:complexType name=\"ArrayDelegate\">\n                <xs:sequence>\n                    <xs:element maxOccurs=\"unbounded\" minOccurs=\"0\" name=\"array\" nillable=\"true\" type=\"xs:anyType\"/>\n                </xs:sequence>\n            </xs:complexType>\n        </xs:schema>\n    </wsdl:types>\n    <wsdl:message name=\"getPatientDataRequest\">\n        <wsdl:part name=\"parameters\" element=\"ns:getPatientData\"/>\n    </wsdl:message>\n    <wsdl:message name=\"getPatientDataResponse\">\n        <wsdl:part name=\"parameters\" element=\"ns:getPatientDataResponse\"/>\n    </wsdl:message>\n    <wsdl:message name=\"ihp_uat.web_services.PATIENT.GetPatientData.cfcCFCInvocationException\">\n        <wsdl:part name=\"parameters\" element=\"ns:ihp_uat.web_services.PATIENT.GetPatientData.cfcCFCInvocationException\"/>\n    </wsdl:message>\n    <wsdl:portType name=\"ihp_uat.web_services.PATIENT.GetPatientData.cfcPortType\">\n        <wsdl:operation name=\"getPatientData\">\n            <wsdl:input message=\"ns:getPatientDataRequest\" wsaw:Action=\"urn:getPatientData\"/>\n            <wsdl:output message=\"ns:getPatientDataResponse\" wsaw:Action=\"urn:getPatientDataResponse\"/>\n            <wsdl:fault message=\"ns:ihp_uat.web_services.PATIENT.GetPatientData.cfcCFCInvocationException\" name=\"ihp_uat.web_services.PATIENT.GetPatientData.cfcCFCInvocationException\" wsaw:Action=\"urn:getPatientDataihp_uat.web_services.PATIENT.GetPatientData.cfcCFCInvocationException\"/>\n        </wsdl:operation>\n    </wsdl:portType>\n    <wsdl:binding name=\"ihp_uat.web_services.PATIENT.GetPatientData.cfcSoap11Binding\" type=\"ns:ihp_uat.web_services.PATIENT.GetPatientData.cfcPortType\">\n        <soap:binding transport=\"http://schemas.xmlsoap.org/soap/http\" style=\"document\"/>\n        <wsdl:operation name=\"getPatientData\">\n            <soap:operation soapAction=\"urn:getPatientData\" style=\"document\"/>\n            <wsdl:input>\n                <soap:body use=\"literal\"/>\n            </wsdl:input>\n            <wsdl:output>\n                <soap:body use=\"literal\"/>\n            </wsdl:output>\n            <wsdl:fault name=\"ihp_uat.web_services.PATIENT.GetPatientData.cfcCFCInvocationException\">\n                <soap:fault use=\"literal\" name=\"ihp_uat.web_services.PATIENT.GetPatientData.cfcCFCInvocationException\"/>\n            </wsdl:fault>\n        </wsdl:operation>\n    </wsdl:binding>\n    <wsdl:binding name=\"ihp_uat.web_services.PATIENT.GetPatientData.cfcSoap12Binding\" type=\"ns:ihp_uat.web_services.PATIENT.GetPatientData.cfcPortType\">\n        <soap12:binding transport=\"http://schemas.xmlsoap.org/soap/http\" style=\"document\"/>\n        <wsdl:operation name=\"getPatientData\">\n            <soap12:operation soapAction=\"urn:getPatientData\" style=\"document\"/>\n            <wsdl:input>\n                <soap12:body use=\"literal\"/>\n            </wsdl:input>\n            <wsdl:output>\n                <soap12:body use=\"literal\"/>\n            </wsdl:output>\n            <wsdl:fault name=\"ihp_uat.web_services.PATIENT.GetPatientData.cfcCFCInvocationException\">\n                <soap12:fault use=\"literal\" name=\"ihp_uat.web_services.PATIENT.GetPatientData.cfcCFCInvocationException\"/>\n            </wsdl:fault>\n        </wsdl:operation>\n    </wsdl:binding>\n    <wsdl:service name=\"ihp_uat.web_services.PATIENT.GetPatientData.cfc\">\n        <wsdl:port name=\"ihp_uat.web_services.PATIENT.GetPatientData.cfcHttpSoap11Endpoint\" binding=\"ns:ihp_uat.web_services.PATIENT.GetPatientData.cfcSoap11Binding\">\n            <soap:address location=\"http://nh-europa.nova-vesalius.com:80/ihp_uat/web_services/PATIENT/GetPatientData.cfc\"/>\n        </wsdl:port>\n        <wsdl:port name=\"ihp_uat.web_services.PATIENT.GetPatientData.cfcHttpsSoap11Endpoint\" binding=\"ns:ihp_uat.web_services.PATIENT.GetPatientData.cfcSoap11Binding\">\n            <soap:address location=\"https://nh-europa.nova-vesalius.com:443/ihp_uat/web_services/PATIENT/GetPatientData.cfc\"/>\n        </wsdl:port>\n        <wsdl:port name=\"ihp_uat.web_services.PATIENT.GetPatientData.cfcHttpsSoap12Endpoint\" binding=\"ns:ihp_uat.web_services.PATIENT.GetPatientData.cfcSoap12Binding\">\n            <soap12:address location=\"https://nh-europa.nova-vesalius.com:443/ihp_uat/web_services/PATIENT/GetPatientData.cfc\"/>\n        </wsdl:port>\n        <wsdl:port name=\"ihp_uat.web_services.PATIENT.GetPatientData.cfcHttpSoap12Endpoint\" binding=\"ns:ihp_uat.web_services.PATIENT.GetPatientData.cfcSoap12Binding\">\n            <soap12:address location=\"http://nh-europa.nova-vesalius.com:80/ihp_uat/web_services/PATIENT/GetPatientData.cfc\"/>\n        </wsdl:port>\n    </wsdl:service>\n</wsdl:definitions>"
+    },
+    {
+      "id": "998120b5-dcba-453f-93c6-c0e3e40feb43",
+      "content": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><wsdl:definitions xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\" xmlns:ns=\"http://ws.apache.org/axis2\" xmlns:ax23=\"http://rpc.xml.coldfusion/xsd\" xmlns:wsaw=\"http://www.w3.org/2006/05/addressing/wsdl\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\" xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\" xmlns:ns1=\"http://org.apache.axis2/xsd\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\" targetNamespace=\"http://ws.apache.org/axis2\">\n    <wsdl:types>\n        <xs:schema xmlns:ax24=\"http://rpc.xml.coldfusion/xsd\" attributeFormDefault=\"qualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://ws.apache.org/axis2\">\n            <xs:import namespace=\"http://rpc.xml.coldfusion/xsd\"/>\n            <xs:element name=\"ihp_uat.web_services.AUTHENTICATION.Login.cfcCFCInvocationException\">\n                <xs:complexType>\n                    <xs:sequence>\n                        <xs:element minOccurs=\"0\" name=\"CFCInvocationException\" nillable=\"true\" type=\"ax24:CFCInvocationException\"/>\n                    </xs:sequence>\n                </xs:complexType>\n            </xs:element>\n            <xs:element name=\"login\">\n                <xs:complexType>\n                    <xs:sequence>\n                        <xs:element minOccurs=\"0\" name=\"company_code\" nillable=\"true\" type=\"xs:string\"/>\n                        <xs:element minOccurs=\"0\" name=\"system_code\" nillable=\"true\" type=\"xs:string\"/>\n                        <xs:element minOccurs=\"0\" name=\"password\" nillable=\"true\" type=\"xs:string\"/>\n                    </xs:sequence>\n                </xs:complexType>\n            </xs:element>\n            <xs:element name=\"loginResponse\">\n                <xs:complexType>\n                    <xs:sequence>\n                        <xs:element minOccurs=\"0\" name=\"return\" nillable=\"true\" type=\"xs:string\"/>\n                    </xs:sequence>\n                </xs:complexType>\n            </xs:element>\n            <xs:complexType name=\"document\">\n                <xs:sequence>\n                    <xs:any/>\n                </xs:sequence>\n            </xs:complexType>\n        </xs:schema>\n        <xs:schema attributeFormDefault=\"qualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://rpc.xml.coldfusion/xsd\">\n            <xs:complexType name=\"CFCInvocationException\">\n                <xs:sequence/>\n            </xs:complexType>\n            <xs:complexType name=\"StructDelegate\">\n                <xs:sequence>\n                    <xs:element maxOccurs=\"unbounded\" minOccurs=\"0\" name=\"entries\" nillable=\"true\" type=\"ax23:EntryDelegate\"/>\n                </xs:sequence>\n            </xs:complexType>\n            <xs:complexType name=\"EntryDelegate\">\n                <xs:sequence>\n                    <xs:element minOccurs=\"0\" name=\"key\" nillable=\"true\" type=\"xs:anyType\"/>\n                    <xs:element minOccurs=\"0\" name=\"value\" nillable=\"true\" type=\"xs:anyType\"/>\n                </xs:sequence>\n            </xs:complexType>\n            <xs:complexType name=\"QueryBean\">\n                <xs:sequence>\n                    <xs:element maxOccurs=\"unbounded\" minOccurs=\"0\" name=\"columnList\" nillable=\"true\" type=\"xs:string\"/>\n                    <xs:element maxOccurs=\"unbounded\" minOccurs=\"0\" name=\"data\" nillable=\"true\" type=\"ax23:ArrayOfObject\"/>\n                </xs:sequence>\n            </xs:complexType>\n            <xs:complexType name=\"ArrayOfObject\">\n                <xs:sequence>\n                    <xs:element maxOccurs=\"unbounded\" minOccurs=\"0\" name=\"array\" nillable=\"true\" type=\"xs:anyType\"/>\n                </xs:sequence>\n            </xs:complexType>\n            <xs:complexType name=\"DocumentDelegate\">\n                <xs:sequence>\n                    <xs:element minOccurs=\"0\" name=\"document\" nillable=\"true\" type=\"ns:document\"/>\n                </xs:sequence>\n            </xs:complexType>\n            <xs:complexType name=\"ArrayDelegate\">\n                <xs:sequence>\n                    <xs:element maxOccurs=\"unbounded\" minOccurs=\"0\" name=\"array\" nillable=\"true\" type=\"xs:anyType\"/>\n                </xs:sequence>\n            </xs:complexType>\n        </xs:schema>\n    </wsdl:types>\n    <wsdl:message name=\"loginRequest\">\n        <wsdl:part name=\"parameters\" element=\"ns:login\"/>\n    </wsdl:message>\n    <wsdl:message name=\"loginResponse\">\n        <wsdl:part name=\"parameters\" element=\"ns:loginResponse\"/>\n    </wsdl:message>\n    <wsdl:message name=\"ihp_uat.web_services.AUTHENTICATION.Login.cfcCFCInvocationException\">\n        <wsdl:part name=\"parameters\" element=\"ns:ihp_uat.web_services.AUTHENTICATION.Login.cfcCFCInvocationException\"/>\n    </wsdl:message>\n    <wsdl:portType name=\"ihp_uat.web_services.AUTHENTICATION.Login.cfcPortType\">\n        <wsdl:operation name=\"login\">\n            <wsdl:input message=\"ns:loginRequest\" wsaw:Action=\"urn:login\"/>\n            <wsdl:output message=\"ns:loginResponse\" wsaw:Action=\"urn:loginResponse\"/>\n            <wsdl:fault message=\"ns:ihp_uat.web_services.AUTHENTICATION.Login.cfcCFCInvocationException\" name=\"ihp_uat.web_services.AUTHENTICATION.Login.cfcCFCInvocationException\" wsaw:Action=\"urn:loginihp_uat.web_services.AUTHENTICATION.Login.cfcCFCInvocationException\"/>\n        </wsdl:operation>\n    </wsdl:portType>\n    <wsdl:binding name=\"ihp_uat.web_services.AUTHENTICATION.Login.cfcSoap11Binding\" type=\"ns:ihp_uat.web_services.AUTHENTICATION.Login.cfcPortType\">\n        <soap:binding transport=\"http://schemas.xmlsoap.org/soap/http\" style=\"document\"/>\n        <wsdl:operation name=\"login\">\n            <soap:operation soapAction=\"urn:login\" style=\"document\"/>\n            <wsdl:input>\n                <soap:body use=\"literal\"/>\n            </wsdl:input>\n            <wsdl:output>\n                <soap:body use=\"literal\"/>\n            </wsdl:output>\n            <wsdl:fault name=\"ihp_uat.web_services.AUTHENTICATION.Login.cfcCFCInvocationException\">\n                <soap:fault use=\"literal\" name=\"ihp_uat.web_services.AUTHENTICATION.Login.cfcCFCInvocationException\"/>\n            </wsdl:fault>\n        </wsdl:operation>\n    </wsdl:binding>\n    <wsdl:binding name=\"ihp_uat.web_services.AUTHENTICATION.Login.cfcSoap12Binding\" type=\"ns:ihp_uat.web_services.AUTHENTICATION.Login.cfcPortType\">\n        <soap12:binding transport=\"http://schemas.xmlsoap.org/soap/http\" style=\"document\"/>\n        <wsdl:operation name=\"login\">\n            <soap12:operation soapAction=\"urn:login\" style=\"document\"/>\n            <wsdl:input>\n                <soap12:body use=\"literal\"/>\n            </wsdl:input>\n            <wsdl:output>\n                <soap12:body use=\"literal\"/>\n            </wsdl:output>\n            <wsdl:fault name=\"ihp_uat.web_services.AUTHENTICATION.Login.cfcCFCInvocationException\">\n                <soap12:fault use=\"literal\" name=\"ihp_uat.web_services.AUTHENTICATION.Login.cfcCFCInvocationException\"/>\n            </wsdl:fault>\n        </wsdl:operation>\n    </wsdl:binding>\n    <wsdl:service name=\"ihp_uat.web_services.AUTHENTICATION.Login.cfc\">\n        <wsdl:port name=\"ihp_uat.web_services.AUTHENTICATION.Login.cfcHttpsSoap11Endpoint\" binding=\"ns:ihp_uat.web_services.AUTHENTICATION.Login.cfcSoap11Binding\">\n            <soap:address location=\"https://nh-europa.nova-vesalius.com:443/ihp_uat/web_services/AUTHENTICATION/Login.cfc\"/>\n        </wsdl:port>\n        <wsdl:port name=\"ihp_uat.web_services.AUTHENTICATION.Login.cfcHttpSoap11Endpoint\" binding=\"ns:ihp_uat.web_services.AUTHENTICATION.Login.cfcSoap11Binding\">\n            <soap:address location=\"http://nh-europa.nova-vesalius.com:80/ihp_uat/web_services/AUTHENTICATION/Login.cfc\"/>\n        </wsdl:port>\n        <wsdl:port name=\"ihp_uat.web_services.AUTHENTICATION.Login.cfcHttpsSoap12Endpoint\" binding=\"ns:ihp_uat.web_services.AUTHENTICATION.Login.cfcSoap12Binding\">\n            <soap12:address location=\"https://nh-europa.nova-vesalius.com:443/ihp_uat/web_services/AUTHENTICATION/Login.cfc\"/>\n        </wsdl:port>\n        <wsdl:port name=\"ihp_uat.web_services.AUTHENTICATION.Login.cfcHttpSoap12Endpoint\" binding=\"ns:ihp_uat.web_services.AUTHENTICATION.Login.cfcSoap12Binding\">\n            <soap12:address location=\"http://nh-europa.nova-vesalius.com:80/ihp_uat/web_services/AUTHENTICATION/Login.cfc\"/>\n        </wsdl:port>\n    </wsdl:service>\n</wsdl:definitions>"
+    },
+    {
+      "id": "d7c6d881-9286-477a-ac2f-055e0451e1ec",
+      "content": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><wsdl:definitions xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\" xmlns:ns=\"http://ws.apache.org/axis2\" xmlns:wsaw=\"http://www.w3.org/2006/05/addressing/wsdl\" xmlns:ax25=\"http://rpc.xml.coldfusion/xsd\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\" xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\" xmlns:ns1=\"http://org.apache.axis2/xsd\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\" targetNamespace=\"http://ws.apache.org/axis2\">\n    <wsdl:types>\n        <xs:schema xmlns:ax26=\"http://rpc.xml.coldfusion/xsd\" attributeFormDefault=\"qualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://ws.apache.org/axis2\">\n            <xs:import namespace=\"http://rpc.xml.coldfusion/xsd\"/>\n            <xs:element name=\"ihp_uat.web_services.APPOINTMENT.getFutureAppointment.cfcCFCInvocationException\">\n                <xs:complexType>\n                    <xs:sequence>\n                        <xs:element minOccurs=\"0\" name=\"CFCInvocationException\" nillable=\"true\" type=\"ax26:CFCInvocationException\"/>\n                    </xs:sequence>\n                </xs:complexType>\n            </xs:element>\n            <xs:element name=\"getFutureAppointment\">\n                <xs:complexType>\n                    <xs:sequence>\n                        <xs:element minOccurs=\"0\" name=\"prn\" nillable=\"true\" type=\"xs:string\"/>\n                        <xs:element minOccurs=\"0\" name=\"company_code\" nillable=\"true\" type=\"xs:string\"/>\n                        <xs:element minOccurs=\"0\" name=\"token_number\" nillable=\"true\" type=\"xs:string\"/>\n                    </xs:sequence>\n                </xs:complexType>\n            </xs:element>\n            <xs:element name=\"getFutureAppointmentResponse\">\n                <xs:complexType>\n                    <xs:sequence>\n                        <xs:element minOccurs=\"0\" name=\"return\" nillable=\"true\" type=\"xs:string\"/>\n                    </xs:sequence>\n                </xs:complexType>\n            </xs:element>\n            <xs:complexType name=\"document\">\n                <xs:sequence>\n                    <xs:any/>\n                </xs:sequence>\n            </xs:complexType>\n        </xs:schema>\n        <xs:schema attributeFormDefault=\"qualified\" elementFormDefault=\"qualified\" targetNamespace=\"http://rpc.xml.coldfusion/xsd\">\n            <xs:complexType name=\"CFCInvocationException\">\n                <xs:sequence/>\n            </xs:complexType>\n            <xs:complexType name=\"StructDelegate\">\n                <xs:sequence>\n                    <xs:element maxOccurs=\"unbounded\" minOccurs=\"0\" name=\"entries\" nillable=\"true\" type=\"ax25:EntryDelegate\"/>\n                </xs:sequence>\n            </xs:complexType>\n            <xs:complexType name=\"EntryDelegate\">\n                <xs:sequence>\n                    <xs:element minOccurs=\"0\" name=\"key\" nillable=\"true\" type=\"xs:anyType\"/>\n                    <xs:element minOccurs=\"0\" name=\"value\" nillable=\"true\" type=\"xs:anyType\"/>\n                </xs:sequence>\n            </xs:complexType>\n            <xs:complexType name=\"QueryBean\">\n                <xs:sequence>\n                    <xs:element maxOccurs=\"unbounded\" minOccurs=\"0\" name=\"columnList\" nillable=\"true\" type=\"xs:string\"/>\n                    <xs:element maxOccurs=\"unbounded\" minOccurs=\"0\" name=\"data\" nillable=\"true\" type=\"ax25:ArrayOfObject\"/>\n                </xs:sequence>\n            </xs:complexType>\n            <xs:complexType name=\"ArrayOfObject\">\n                <xs:sequence>\n                    <xs:element maxOccurs=\"unbounded\" minOccurs=\"0\" name=\"array\" nillable=\"true\" type=\"xs:anyType\"/>\n                </xs:sequence>\n            </xs:complexType>\n            <xs:complexType name=\"DocumentDelegate\">\n                <xs:sequence>\n                    <xs:element minOccurs=\"0\" name=\"document\" nillable=\"true\" type=\"ns:document\"/>\n                </xs:sequence>\n            </xs:complexType>\n            <xs:complexType name=\"ArrayDelegate\">\n                <xs:sequence>\n                    <xs:element maxOccurs=\"unbounded\" minOccurs=\"0\" name=\"array\" nillable=\"true\" type=\"xs:anyType\"/>\n                </xs:sequence>\n            </xs:complexType>\n        </xs:schema>\n    </wsdl:types>\n    <wsdl:message name=\"getFutureAppointmentRequest\">\n        <wsdl:part name=\"parameters\" element=\"ns:getFutureAppointment\"/>\n    </wsdl:message>\n    <wsdl:message name=\"getFutureAppointmentResponse\">\n        <wsdl:part name=\"parameters\" element=\"ns:getFutureAppointmentResponse\"/>\n    </wsdl:message>\n    <wsdl:message name=\"ihp_uat.web_services.APPOINTMENT.getFutureAppointment.cfcCFCInvocationException\">\n        <wsdl:part name=\"parameters\" element=\"ns:ihp_uat.web_services.APPOINTMENT.getFutureAppointment.cfcCFCInvocationException\"/>\n    </wsdl:message>\n    <wsdl:portType name=\"ihp_uat.web_services.APPOINTMENT.getFutureAppointment.cfcPortType\">\n        <wsdl:operation name=\"getFutureAppointment\">\n            <wsdl:input message=\"ns:getFutureAppointmentRequest\" wsaw:Action=\"urn:getFutureAppointment\"/>\n            <wsdl:output message=\"ns:getFutureAppointmentResponse\" wsaw:Action=\"urn:getFutureAppointmentResponse\"/>\n            <wsdl:fault message=\"ns:ihp_uat.web_services.APPOINTMENT.getFutureAppointment.cfcCFCInvocationException\" name=\"ihp_uat.web_services.APPOINTMENT.getFutureAppointment.cfcCFCInvocationException\" wsaw:Action=\"urn:getFutureAppointmentihp_uat.web_services.APPOINTMENT.getFutureAppointment.cfcCFCInvocationException\"/>\n        </wsdl:operation>\n    </wsdl:portType>\n    <wsdl:binding name=\"ihp_uat.web_services.APPOINTMENT.getFutureAppointment.cfcSoap11Binding\" type=\"ns:ihp_uat.web_services.APPOINTMENT.getFutureAppointment.cfcPortType\">\n        <soap:binding transport=\"http://schemas.xmlsoap.org/soap/http\" style=\"document\"/>\n        <wsdl:operation name=\"getFutureAppointment\">\n            <soap:operation soapAction=\"urn:getFutureAppointment\" style=\"document\"/>\n            <wsdl:input>\n                <soap:body use=\"literal\"/>\n            </wsdl:input>\n            <wsdl:output>\n                <soap:body use=\"literal\"/>\n            </wsdl:output>\n            <wsdl:fault name=\"ihp_uat.web_services.APPOINTMENT.getFutureAppointment.cfcCFCInvocationException\">\n                <soap:fault use=\"literal\" name=\"ihp_uat.web_services.APPOINTMENT.getFutureAppointment.cfcCFCInvocationException\"/>\n            </wsdl:fault>\n        </wsdl:operation>\n    </wsdl:binding>\n    <wsdl:binding name=\"ihp_uat.web_services.APPOINTMENT.getFutureAppointment.cfcSoap12Binding\" type=\"ns:ihp_uat.web_services.APPOINTMENT.getFutureAppointment.cfcPortType\">\n        <soap12:binding transport=\"http://schemas.xmlsoap.org/soap/http\" style=\"document\"/>\n        <wsdl:operation name=\"getFutureAppointment\">\n            <soap12:operation soapAction=\"urn:getFutureAppointment\" style=\"document\"/>\n            <wsdl:input>\n                <soap12:body use=\"literal\"/>\n            </wsdl:input>\n            <wsdl:output>\n                <soap12:body use=\"literal\"/>\n            </wsdl:output>\n            <wsdl:fault name=\"ihp_uat.web_services.APPOINTMENT.getFutureAppointment.cfcCFCInvocationException\">\n                <soap12:fault use=\"literal\" name=\"ihp_uat.web_services.APPOINTMENT.getFutureAppointment.cfcCFCInvocationException\"/>\n            </wsdl:fault>\n        </wsdl:operation>\n    </wsdl:binding>\n    <wsdl:service name=\"ihp_uat.web_services.APPOINTMENT.getFutureAppointment.cfc\">\n        <wsdl:port name=\"ihp_uat.web_services.APPOINTMENT.getFutureAppointment.cfcHttpsSoap11Endpoint\" binding=\"ns:ihp_uat.web_services.APPOINTMENT.getFutureAppointment.cfcSoap11Binding\">\n            <soap:address location=\"https://nh-europa.nova-vesalius.com:443/ihp_uat/web_services/APPOINTMENT/getFutureAppointment.cfc\"/>\n        </wsdl:port>\n        <wsdl:port name=\"ihp_uat.web_services.APPOINTMENT.getFutureAppointment.cfcHttpSoap11Endpoint\" binding=\"ns:ihp_uat.web_services.APPOINTMENT.getFutureAppointment.cfcSoap11Binding\">\n            <soap:address location=\"http://nh-europa.nova-vesalius.com:80/ihp_uat/web_services/APPOINTMENT/getFutureAppointment.cfc\"/>\n        </wsdl:port>\n        <wsdl:port name=\"ihp_uat.web_services.APPOINTMENT.getFutureAppointment.cfcHttpSoap12Endpoint\" binding=\"ns:ihp_uat.web_services.APPOINTMENT.getFutureAppointment.cfcSoap12Binding\">\n            <soap12:address location=\"http://nh-europa.nova-vesalius.com:80/ihp_uat/web_services/APPOINTMENT/getFutureAppointment.cfc\"/>\n        </wsdl:port>\n        <wsdl:port name=\"ihp_uat.web_services.APPOINTMENT.getFutureAppointment.cfcHttpsSoap12Endpoint\" binding=\"ns:ihp_uat.web_services.APPOINTMENT.getFutureAppointment.cfcSoap12Binding\">\n            <soap12:address location=\"https://nh-europa.nova-vesalius.com:443/ihp_uat/web_services/APPOINTMENT/getFutureAppointment.cfc\"/>\n        </wsdl:port>\n    </wsdl:service>\n</wsdl:definitions>"
+    }
+  ]
+}
